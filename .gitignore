@@ -1,0 +1,6 @@
+# Generated files
+_site/
+
+# Dependencies
+node_modules/
+package-lock.json
