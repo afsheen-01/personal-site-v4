@@ -4,9 +4,9 @@
         <h1 class="text-3xl font-serif">
             <a href="/" class="cursor-pointer">Afsheen</a>
         </h1>
-        <button>
+        {% comment %} <button onclick="toggleTheme()" class="cursor-pointer" id="theme-toggle">
             <i class="ph-sun text-2xl text-nav-text"></i>
-        </button> 
+        </button>  {% endcomment %}
     </div>
 
     <nav class="space-y-18">
@@ -53,15 +53,20 @@
     </nav> 
 </aside>
 
-{% comment %} <script>
-    const currentUrl = window.location.pathname;
-    const links = document.querySelectorAll('a');
-    links.forEach(link => {
-        if (link.getAttribute('href') === currentUrl) {
-            console.log(link, link.getAttribute('href'))
-            link.classList.add('active');
-        }
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const currentUrl = window.location.pathname;
+        const navigationLinks = document.querySelectorAll('nav a');
+        
+        navigationLinks.forEach((link) => {
+            const href = link.getAttribute('href');
+            
+            if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
+                
+                link.classList.remove('text-nav-text');
+                link.classList.add('text-black', 'font-medium');
+            }
+        });
     });
 
-    console.log(currentUrl, links)
-</script> {% endcomment %}
+</script>
