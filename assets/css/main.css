@@ -55,11 +55,16 @@
     --font-sans: "Be Vietnam", sans-serif;
     --color-bd-light: #E4E4E4;
     --color-nav-text: #686868;
+    --color-primary-text-light: #313131;
+    --color-secondary-text-light: #515151;
+    --color-designation-light: #767676;
+    --color-timeline-light: #959595
     
 }
 
 @layer base {
   html {
     font-family: 'Be Vietnam', system-ui, sans-serif;
+    color: var(--color-primary-text-light);
   }
 }
