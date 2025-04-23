@@ -52,3 +52,16 @@
         </div>
     </nav> 
 </aside>
+
+{% comment %} <script>
+    const currentUrl = window.location.pathname;
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        if (link.getAttribute('href') === currentUrl) {
+            console.log(link, link.getAttribute('href'))
+            link.classList.add('active');
+        }
+    });
+
+    console.log(currentUrl, links)
+</script> {% endcomment %}
