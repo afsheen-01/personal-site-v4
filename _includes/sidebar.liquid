@@ -10,10 +10,50 @@
             </button> 
         </div>
         
-        <button class="md:hidden cursor-not-allowed">
+        <button class="md:hidden cursor-pointer" id="mobile-menu-toggle">
             <i class="ph-text-align-right text-2xl text-hamburger-light"></i>
         </button> 
 
+    </div>
+
+    <!-- Mobile Navigation Overlay (hidden by default) -->
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-white z-50 flex flex-col hidden min-h-screen min-w-screen border">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-bd-light">
+            <div class="w-full flex items-end md:justify-between gap-2">
+            <h1 class="text-3xl font-serif">
+                <a href="/" class="cursor-pointer">Afsheen</a>
+            </h1>
+            <button class="cursor-not-allowed" id="theme-toggle">
+                <i class="ph-sun text-xl md:text-2xl text-gray-300"></i>
+            </button> 
+        </div>
+            <button id="close-mobile-nav" class="cursor-pointer">
+                <i class="ph-x text-2xl text-hamburger-light"></i>
+            </button>
+        </div>
+        
+        <div class="flex flex-col space-y-4 px-6 py-6">
+            <a href="/" class="text-lg text-nav-text">
+                Experience
+            </a>
+            <a href="/skills" class="text-lg text-nav-text">
+                Skills
+            </a>
+            <a href="/explorations" class="text-lg text-nav-text">
+                Explorations
+            </a>
+            <a href="#" class="text-lg text-gray-400 cursor-not-allowed">
+                Blogs
+            </a>
+            <a href="#" class="text-lg text-gray-400 flex items-center gap-2 cursor-not-allowed">
+                Blogs(non-tech)
+                <i class="ph-arrow-square-out text-xl text-gray-400"></i>
+            </a>
+            <a href="https://www.instagram.com/a_peep_clicks?igsh=MThtdGNsYTk4cG52bQ%3D%3D&utm_source=qr" target="_blank" class="text-lg text-nav-text flex items-center gap-2">
+                Gallery
+                <i class="ph-arrow-square-out text-xl text-nav-text"></i>
+            </a>
+        </div>
     </div>
 
     <nav class="space-y-4 md:block hidden">
@@ -47,9 +87,8 @@
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const currentUrl = window.location.pathname;
-        const navigationLinks = document.querySelectorAll('nav a');
         
-        navigationLinks.forEach((link) => {
+        document.querySelectorAll('nav a').forEach((link) => {
             const href = link.getAttribute('href');
             
             if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
@@ -58,6 +97,23 @@
                 link.classList.add('text-black');
             }
         });
+
+        // Mobile menu toggle
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const closeButton = document.getElementById('close-mobile-nav');
+        
+        if (mobileMenuToggle && mobileNavOverlay && closeButton) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileNavOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when overlay is open
+            });
+            
+            closeButton.addEventListener('click', () => {
+                mobileNavOverlay.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        }
     });
 
 </script>
