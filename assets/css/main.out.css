@@ -33,7 +33,7 @@
     --color-nav-text: #686868;
     --color-primary-text-light: #313131;
     --color-designation-light: #767676;
-    --color-timeline-light: #959595
+    --color-timeline-light: #959595;
     --color-hamburger-light: #A4A4A4;
   }
 }
@@ -272,6 +272,13 @@
       margin-block-end: calc(calc(var(--spacing) * 9) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .space-y-11 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 11) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 11) * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
   .space-x-4 {
     :where(& > :not(:last-child)) {
       --tw-space-x-reverse: 0;
@@ -352,6 +359,9 @@
   }
   .text-gray-800 {
     color: var(--color-gray-800);
+  }
+  .text-hamburger-light {
+    color: var(--color-hamburger-light);
   }
   .text-nav-text {
     color: var(--color-nav-text);
