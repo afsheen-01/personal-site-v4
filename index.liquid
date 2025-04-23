@@ -1,260 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afsheen | Personal Site</title>
-    <style>
-        :root {
-            --text-color: #333;
-            --bg-color: #fff;
-            --sidebar-bg: #f9f9f9;
-            --accent-color: #4a6cf7;
-            --light-gray: #888;
-        }
+    <html lang="en">
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            line-height: 1.6;
-        }
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Afsheen | Personal Site</title>
+            <link rel="stylesheet" href="/assets/css/main.out.css">
+        </head>
 
-        .container {
-            display: flex;
-            min-height: 100vh;
-        }
+        <body class="font-sans text-gray-800 bg-white">
+            <div class="flex min-h-screen">
+                <!-- Sidebar -->
+            {% include 'sidebar' %}
 
-        .sidebar {
-            width: 220px;
-            background-color: var(--sidebar-bg);
-            padding: 30px 20px;
-            border-right: 1px solid #eee;
-            position: sticky;
-            top: 0;
-            height: 100vh;
-            overflow-y: auto;
-        }
+                <!-- Main Content -->
+                <main class="flex-1 p-10 max-w-3xl">
+                    <div class="mb-8">
+                        <p class="text-lg">Welcome to my virtual home. I am a <span class="font-semibold">Product Engineer</span> with 3 years of experience. I love to build products and have been wearing multiple hats like <span class="font-semibold">engineer, UX Designer, CS, Sales</span> etc.</p>
+                    </div>
 
-        .main-content {
-            flex: 1;
-            padding: 40px;
-            max-width: 800px;
-        }
+                    <h2 class="text-2xl font-bold mb-6">Noteworthy experience</h2>
+                    
+                    <!-- Experience: Arch0 -->
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <h3 class="text-xl font-semibold">Arch0,</h3>
+                            <span class="text-gray-600 ml-2">Design Engineer</span>
+                            <span class="text-gray-500 ml-2">• Sept'23 - Present</span>
+                        </div>
+                        <p class="mt-1">Revamped website in <span class="italic">Webflow</span>, Redesigned the platform in <span class="font-semibold">Figma</span> and marketing automation.</p>
+                    </div>
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-        }
+                    <!-- Experience: Venn -->
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <h3 class="text-xl font-semibold">Venn,</h3>
+                            <span class="text-gray-600 ml-2">Consultant</span>
+                            <span class="text-gray-500 ml-2">• Sept'23 - Present</span>
+                        </div>
+                        <p class="mt-1">Built <a href="#" class="underline">website</a> for the <span class="font-sans font-bold">Putting Scene Community</span> to discover events using <span class="font-semibold">React, Typescript</span></p>
+                    </div>
 
-        h2 {
-            font-size: 1.8rem;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-weight: bold;
-        }
+                    <!-- Experience: Bureau -->
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <h3 class="text-xl font-semibold">Bureau,</h3>
+                            <span class="text-gray-600 ml-2">Software Engineer</span>
+                            <span class="text-gray-500 ml-2">• Jan'22 - sept'23</span>
+                        </div>
+                        <p class="mt-1">Built 4 dashboards, 7 demos across 3 products and a product end-to-end. Developed products, marketing site, etc. using multiple tools like <span class="font-semibold">Javascript</span> and <span class="font-semibold">Typescript, React, Chakra UI, Webflow, Framer, Jira, Confluence</span> and many more.</p>
+                    </div>
 
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.5rem;
-            margin-left: 10px;
-        }
-
-        .experience-item {
-            margin-bottom: 2rem;
-        }
-
-        .company-title {
-            display: flex;
-            align-items: baseline;
-            margin-bottom: 0.5rem;
-        }
-
-        .company {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-right: 0.5rem;
-        }
-
-        .title {
-            color: #666;
-            font-size: 1.1rem;
-        }
-
-        .date {
-            color: #888;
-            margin-left: 0.5rem;
-        }
-
-        .description {
-            margin-top: 0.5rem;
-        }
-
-        .tech {
-            font-weight: bold;
-        }
-
-        .nav-item {
-            margin-bottom: 1rem;
-            font-size: 1.1rem;
-            cursor: pointer;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 2rem;
-        }
-
-        .social-links a {
-            color: var(--text-color);
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-
-        .external-link {
-            display: inline-flex;
-            align-items: center;
-            text-decoration: none;
-            color: var(--text-color);
-        }
-
-        .external-link svg {
-            margin-left: 4px;
-            width: 12px;
-            height: 12px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="header">
-                <h1>Afsheen</h1>
-                <button class="theme-toggle">☀️</button>
+                    <!-- Experience: Obvious -->
+                    <div class="mb-8">
+                        <div class="flex items-baseline">
+                            <h3 class="text-xl font-semibold">Obvious,</h3>
+                            <span class="text-gray-600 ml-2">Product Engineer Intern</span>
+                            <span class="text-gray-500 ml-2">• July'21 - Jan'22</span>
+                        </div>
+                        <p class="mt-1">Optimized website, built product-lets in <span class="font-semibold">Wordpress</span>, helped making marketing campaign in <span class="font-semibold">Intercom</span> and migrated frontend codebase to <span class="font-semibold">Typescript</span> for Pause.</p>
+                    </div>
+                </main>
             </div>
-            <nav>
-                <div class="nav-item">Experience</div>
-                <div class="nav-item">Skills</div>
-                <div class="nav-item">
-                    <a href="#" class="external-link">
-                        Gallery
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                            <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                        </svg>
-                    </a>
-                </div>
-            </nav>
-            <div class="social-links">
-                <a href="mailto:your-email@example.com" title="Email">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                        <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                </a>
-                <a href="#" title="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                </a>
-                <a href="#" title="Twitter/X">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                    </svg>
-                </a>
-                <a href="#" title="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                </a>
-                <a href="#" title="Instagram">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                    </svg>
-                </a>
-            </div>
-        </aside>
-        <main class="main-content">
-            <div class="header">
-                <h1>Afsheen</h1>
-            </div>
-            <div class="intro">
-                <p>Welcome to my virtual home. I am a <strong>Product Engineer</strong> with 3 years of experience. I love to build products and have been wearing multiple hats like <strong>engineer, UX Designer, CS, Sales</strong> etc.</p>
-            </div>
-
-            <h2>Noteworthy experience</h2>
-            
-            <div class="experience-item">
-                <div class="company-title">
-                    <span class="company">Arch0,</span>
-                    <span class="title">Design Engineer</span>
-                    <span class="date">• Sept'23 - Present</span>
-                </div>
-                <div class="description">
-                    Revamped website in <span class="tech">Webflow</span>, Redesigned the platform in <span class="tech">Figma</span> and marketing automation.
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-title">
-                    <span class="company">Venn,</span>
-                    <span class="title">Consultant</span>
-                    <span class="date">• Sept'23 - Present</span>
-                </div>
-                <div class="description">
-                    Built <a href="#">website</a> for the <span class="tech">Putting Scene Community</span> to discover events using <span class="tech">React, Typescript</span>
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-title">
-                    <span class="company">Bureau,</span>
-                    <span class="title">Software Engineer</span>
-                    <span class="date">• Jan'22 - sept'23</span>
-                </div>
-                <div class="description">
-                    Built 4 dashboards, 7 demos across 3 products and a product end-to-end. Developed products, marketing site, etc. using multiple tools like <span class="tech">Javascript</span> and <span class="tech">Typescript, React, Chakra UI, Webflow, Framer, Jira, Confluence</span> and many more.
-                </div>
-            </div>
-
-            <div class="experience-item">
-                <div class="company-title">
-                    <span class="company">Obvious,</span>
-                    <span class="title">Product Engineer Intern</span>
-                    <span class="date">• July'21 - Jan'22</span>
-                </div>
-                <div class="description">
-                    Optimized website, built product-lets in <span class="tech">Wordpress</span>, helped making marketing campaign in <span class="tech">Intercom</span> and migrated frontend codebase to <span class="tech">Typescript</span> for Pause.
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <script>
-        document.querySelector('.theme-toggle').addEventListener('click', function() {
-            const isDark = document.body.classList.toggle('dark-mode');
-            this.textContent = isDark ? '🌙' : '☀️';
-            
-            if (isDark) {
-                document.documentElement.style.setProperty('--text-color', '#f0f0f0');
-                document.documentElement.style.setProperty('--bg-color', '#1a1a1a');
-                document.documentElement.style.setProperty('--sidebar-bg', '#252525');
-            } else {
-                document.documentElement.style.setProperty('--text-color', '#333');
-                document.documentElement.style.setProperty('--bg-color', '#fff');
-                document.documentElement.style.setProperty('--sidebar-bg', '#f9f9f9');
-            }
-        });
-    </script>
-</body>
-</html>
+        </body>
+    </html>
