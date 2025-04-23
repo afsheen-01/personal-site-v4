@@ -1,15 +1,22 @@
-<aside class="w-[210px] border-r border-bd-light h-screen sticky top-0 flex flex-col justify-between">
+<aside class="md:w-[210px] md:border-r border-bd-light h-screen sticky top-0 flex flex-col justify-between">
     
     <div class="flex items-end justify-between px-6 py-4 border-b border-bd-light">
-        <h1 class="text-3xl font-serif">
-            <a href="/" class="cursor-pointer">Afsheen</a>
-        </h1>
-        <button class="cursor-not-allowed" id="theme-toggle">
-            <i class="ph-sun text-2xl text-gray-300"></i>
+        <div class="w-full flex items-end md:justify-between gap-8">
+            <h1 class="text-3xl font-serif">
+                <a href="/" class="cursor-pointer">Afsheen</a>
+            </h1>
+            <button class="cursor-not-allowed" id="theme-toggle">
+                <i class="ph-sun text-2xl text-gray-300"></i>
+            </button> 
+        </div>
+        
+        <button class="md:hidden cursor-not-allowed">
+            <i class="ph-text-align-right text-2xl text-hamburger-light"></i>
         </button> 
+
     </div>
 
-    <nav class="space-y-18">
+    <nav class="space-y-4">
         <div class="flex flex-col space-y-2 px-6">
             <a href="/" class="text-nav-text hover:text-gray-900">
                 Experience
@@ -64,7 +71,7 @@
             if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
                 
                 link.classList.remove('text-nav-text');
-                link.classList.add('text-black', 'font-medium');
+                link.classList.add('text-black');
             }
         });
     });
