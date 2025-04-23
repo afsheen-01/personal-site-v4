@@ -3,13 +3,30 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf _site/ && npm run clean:tailwind",
+    "clean:tailwind": "rm -rf assets/css/main.out.css",
+
+    "build": "npm run build:tailwind && eleventy",
+    "build:tailwind": "npm run clean:tailwind && tailwindcss --input assets/css/main.css --output assets/css/main.out.css",
+
+    "serve": "npm run build:tailwind && eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afsheen-01/personal-site-v4.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Afsheen <afsheenamroliwala@gmail.com>",
   "license": "ISC",
   "description": "",
+  "bugs": {
+    "url": "https://github.com/afsheen-01/personal-site-v4/issues"
+  },
+  "homepage": "https://github.com/afsheen-01/personal-site-v4#readme",
+  "type": "module",
   "dependencies": {
-    "@11ty/eleventy": "^3.0.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@tailwindcss/cli": "^4.1.3",
+    "tailwindcss": "^4.1.3"
   }
 }
