@@ -53,6 +53,9 @@
 @theme {
     --font-serif: "Buenard", serif;
     --font-sans: "Be Vietnam", sans-serif;
+    --color-bd-light: #E4E4E4;
+    --color-nav-text: #686868;
+    
 }
 
 @layer base {
