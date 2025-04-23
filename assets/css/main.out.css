@@ -8,7 +8,6 @@
     --font-serif: "Buenard", serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-500: oklch(63.7% 0.237 25.331);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-600: oklch(44.6% 0.03 256.802);
@@ -230,8 +229,8 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-\[20vw\] {
-    width: 20vw;
+  .w-\[40vw\] {
+    width: 40vw;
   }
   .w-full {
     width: 100%;
@@ -303,18 +302,11 @@
       margin-block-end: calc(calc(var(--spacing) * 6) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
-  .space-y-9 {
+  .space-y-12 {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 9) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 9) * calc(1 - var(--tw-space-y-reverse)));
-    }
-  }
-  .space-y-11 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 11) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 11) * calc(1 - var(--tw-space-y-reverse)));
+      margin-block-start: calc(calc(var(--spacing) * 12) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 12) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .border {
@@ -332,17 +324,11 @@
   .border-bd-light {
     border-color: var(--color-bd-light);
   }
-  .border-red-500 {
-    border-color: var(--color-red-500);
-  }
   .bg-white {
     background-color: var(--color-white);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
-  }
-  .p-8 {
-    padding: calc(var(--spacing) * 8);
   }
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
@@ -355,9 +341,6 @@
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
-  }
-  .pt-22 {
-    padding-top: calc(var(--spacing) * 22);
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
@@ -475,6 +458,11 @@
       height: 100vh;
     }
   }
+  .md\:w-\[20vw\] {
+    @media (width >= 48rem) {
+      width: 20vw;
+    }
+  }
   .md\:w-\[210px\] {
     @media (width >= 48rem) {
       width: 210px;
@@ -488,6 +476,11 @@
   .md\:gap-2 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 2);
+    }
+  }
+  .md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4);
     }
   }
   .md\:space-y-2 {
