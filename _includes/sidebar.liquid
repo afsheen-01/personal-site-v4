@@ -1,24 +1,24 @@
-<aside class="md:w-[210px] md:border-r border-bd-light md:h-screen sticky top-0 flex flex-col justify-between bg-white dark:bg-black">
+<aside class="md:w-[210px] md:border-r border-bd-light dark:border-bd-dark md:h-screen sticky top-0 flex flex-col justify-between bg-white dark:bg-black dark:bg-black">
     
-    <div class="flex items-end justify-between px-6 py-4 border-b border-bd-light">
+    <div class="flex items-end justify-between px-6 py-4 border-b border-bd-light dark:border-bd-dark">
         <div class="w-full flex items-end md:justify-between gap-2">
             <h1 class="text-3xl font-serif">
                 <a href="/" class="cursor-pointer">Afsheen</a>
             </h1>
             <button class="cursor-pointer" id="theme-toggle">
-                <i class="ph-sun text-xl md:text-2xl text-nav-text"></i>
+                <i class="ph-sun text-xl md:text-2xl text-nav-text-light dark:text-nav-text-light-dark"></i>
             </button> 
         </div>
         
         <button class="md:hidden cursor-pointer" id="mobile-menu-toggle">
-            <i class="ph-text-align-right text-2xl text-hamburger-light"></i>
+            <i class="ph-text-align-right text-2xl text-hamburger-light dark:text-hamburger-dark"></i>
         </button> 
 
     </div>
 
     <!-- Mobile Navigation Overlay (hidden by default) -->
-    <div id="mobile-nav-overlay" class="fixed inset-0 bg-white/90 z-50 flex flex-col hidden min-h-screen min-w-screen border">
-        <div class="flex items-center justify-between px-6 py-4 border-b border-bd-light">
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-white dark:bg-black/90 z-50 flex flex-col hidden min-h-screen min-w-screen border">
+        <div class="flex items-center justify-between px-6 py-4 border-b border-bd-light dark:border-bd-dark">
             <div class="w-full flex items-end md:justify-between gap-2">
             <h1 class="text-3xl font-serif">
                 <a href="/" class="cursor-pointer">Afsheen</a>
@@ -28,47 +28,47 @@
             </button> 
         </div>
             <button id="close-mobile-nav" class="cursor-pointer">
-                <i class="ph-x text-2xl text-hamburger-light"></i>
+                <i class="ph-x text-2xl text-hamburger-light dark:text-hamburger-dark"></i>
             </button>
         </div>
         
         <div class="flex flex-col space-y-4 px-6 py-6">
-            <a href="/" class="text-lg text-nav-text">
+            <a href="/" class="text-lg text-nav-text-light dark:text-nav-text-light-dark">
                 Experience
             </a>
-            <a href="/skills" class="text-lg text-nav-text">
+            <a href="/skills" class="text-lg text-nav-text-light dark:text-nav-text-light-dark">
                 Skills
             </a>
-            <a href="/explorations" class="text-lg text-nav-text">
+            <a href="/explorations" class="text-lg text-nav-text-light dark:text-nav-text-light-dark">
                 Explorations
             </a>
-            <a href="/blog" class="text-lg text-nav-text">
+            <a href="/blog" class="text-lg text-nav-text-light dark:text-nav-text-light-dark">
                 Blog
             </a>
-            <a href="https://www.instagram.com/a_peep_clicks?igsh=MThtdGNsYTk4cG52bQ%3D%3D&utm_source=qr" target="_blank" class="text-lg text-nav-text flex items-center gap-2">
+            <a href="https://www.instagram.com/a_peep_clicks?igsh=MThtdGNsYTk4cG52bQ%3D%3D&utm_source=qr" target="_blank" class="text-lg text-nav-text-light dark:text-nav-text-light-dark flex items-center gap-2">
                 Gallery
-                <i class="ph-arrow-square-out text-xl text-nav-text"></i>
+                <i class="ph-arrow-square-out text-xl text-nav-text-light dark:text-nav-text-light-dark"></i>
             </a>
         </div>
     </div>
 
     <nav class="space-y-4 md:block hidden">
         <div class=" flex flex-col space-y-2 px-6">
-            <a href="/" class="text-nav-text hover:text-gray-900">
+            <a href="/" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
                 Experience
             </a>
-            <a href="/skills" class="text-nav-text hover:text-gray-900">
+            <a href="/skills" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
                 Skills
             </a>
-            <a href="/explorations" class="text-nav-text hover:text-gray-900">
+            <a href="/explorations" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
                 Explorations
             </a>
-            <a href="/blog" class="text-nav-text hover:text-gray-900">
+            <a href="/blog" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
                 Blog
             </a>
-            <a href="https://www.instagram.com/a_peep_clicks?igsh=MThtdGNsYTk4cG52bQ%3D%3D&utm_source=qr" target="_blank" class="text-nav-text hover:text-gray-900 flex items-center gap-2">
+            <a href="https://www.instagram.com/a_peep_clicks?igsh=MThtdGNsYTk4cG52bQ%3D%3D&utm_source=qr" target="_blank" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 flex items-center gap-2">
                 Gallery
-                <i class="ph-arrow-square-out text-xl text-nav-text hover:text-gray-900"></i>
+                <i class="ph-arrow-square-out text-xl text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900"></i>
             </a>
         </div>
         
@@ -85,7 +85,7 @@
             
             if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
                 
-                link.classList.remove('text-nav-text');
+                link.classList.remove('text-nav-text-light');
                 link.classList.add('text-black');
             }
         });

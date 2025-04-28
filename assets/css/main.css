@@ -54,13 +54,20 @@
 @theme {
   --font-serif: "Buenard", serif;
   --font-sans: "Be Vietnam", sans-serif;
+  --color-designation: #767676;
+
   --color-bd-light: #e4e4e4;
-  --color-nav-text: #686868;
+  --color-nav-text-light: #686868;
   --color-primary-text-light: #313131;
-  --color-secondary-text-light: #515151;
-  --color-designation-light: #767676;
   --color-timeline-light: #959595;
   --color-hamburger-light: #a4a4a4;
+
+  --color-bd-dark: #4c4c4c;
+  --color-nav-text-light-dark: #a3a3a3;
+  --color-primary-text-dark: #bbbbbb;
+  --color-timeline-dark: #686868;
+  --color-hamburger-dark: #7d7d7d;
+  --color-bold-dark: #C0C0C0; 
 }
 
 @layer base {
