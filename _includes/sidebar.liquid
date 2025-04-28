@@ -159,10 +159,10 @@
             const href = link.getAttribute('href');            
             if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
                 if (isDarkMode) {
-                    link.classList.remove('dark:text-nav-text-light-dark');
+                    link.classList.remove('text-nav-text-light', 'text-black', 'dark:text-nav-text-light-dark');
                     link.classList.add('text-white');
                 } else {
-                    link.classList.remove('text-nav-text-light');
+                    link.classList.remove('text-nav-text-light', 'text-white', 'dark:text-nav-text-light-dark');
                     link.classList.add('text-black');
                 }
             }
