@@ -2,7 +2,7 @@
     
     <div class="flex items-end justify-between px-6 py-4 border-b border-bd-light dark:border-bd-dark">
         <div class="w-full flex items-end md:justify-between gap-2">
-            <h1 class="text-3xl font-serif">
+            <h1 class="text-3xl font-serif dark:text-white">
                 <a href="/" class="cursor-pointer">Afsheen</a>
             </h1>
             <button class="cursor-pointer" id="theme-toggle">
@@ -17,14 +17,14 @@
     </div>
 
     <!-- Mobile Navigation Overlay (hidden by default) -->
-    <div id="mobile-nav-overlay" class="fixed inset-0 bg-white dark:bg-black/90 z-50 flex flex-col hidden min-h-screen min-w-screen border">
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-white dark:bg-black/90 z-50 flex flex-col hidden min-h-screen min-w-screen">
         <div class="flex items-center justify-between px-6 py-4 border-b border-bd-light dark:border-bd-dark">
             <div class="w-full flex items-end md:justify-between gap-2">
             <h1 class="text-3xl font-serif">
                 <a href="/" class="cursor-pointer">Afsheen</a>
             </h1>
             <button class="cursor-not-allowed" id="theme-toggle">
-                <i class="ph-sun text-xl md:text-2xl text-gray-300"></i>
+                <i class="ph-sun text-xl md:text-2xl text-nav-text-light dark:text-nav-text-light-dark"></i>
             </button> 
         </div>
             <button id="close-mobile-nav" class="cursor-pointer">
@@ -54,21 +54,21 @@
 
     <nav class="space-y-4 md:block hidden">
         <div class=" flex flex-col space-y-2 px-6">
-            <a href="/" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
+            <a href="/" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 dark:hover:text-white">
                 Experience
             </a>
-            <a href="/skills" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
+            <a href="/skills" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 dark:hover:text-white">
                 Skills
             </a>
-            <a href="/explorations" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
+            <a href="/explorations" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 dark:hover:text-white">
                 Explorations
             </a>
-            <a href="/blog" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900">
+            <a href="/blog" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 dark:hover:text-white">
                 Blog
             </a>
-            <a href="https://www.instagram.com/a_peep_clicks?igsh=MThtdGNsYTk4cG52bQ%3D%3D&utm_source=qr" target="_blank" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 flex items-center gap-2">
+            <a href="https://www.instagram.com/a_peep_clicks?igsh=MThtdGNsYTk4cG52bQ%3D%3D&utm_source=qr" target="_blank" class="text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 dark:hover:text-white flex items-center gap-2">
                 Gallery
-                <i class="ph-arrow-square-out text-xl text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900"></i>
+                <i class="ph-arrow-square-out text-xl text-nav-text-light dark:text-nav-text-light-dark hover:text-gray-900 dark:hover:text-white"></i>
             </a>
         </div>
         
@@ -78,20 +78,22 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const currentUrl = window.location.pathname;
-        
-        document.querySelectorAll('nav a').forEach((link) => {
-            const href = link.getAttribute('href');
-            
-            if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
-                
-                link.classList.remove('text-nav-text-light');
-                link.classList.add('text-black');
-            }
-        });
 
+        
+        let isDarkMode;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            isDarkMode = true;
+        } else if (savedTheme === 'light') {
+            isDarkMode = false;
+        } else {
+            isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+
+    
         menuToggle();
-        themeToggle();
+        highlightActiveNavLink(isDarkMode);
+        themeToggle(isDarkMode);
         
     });
 
@@ -114,13 +116,11 @@
         }
     }
 
-    const themeToggle = () => {
+    const themeToggle = (isDarkMode) => {
         const themeToggleButton = document.getElementById('theme-toggle');
         const body = document.body;
-        
-        // Set initial icon based on system preference
-        const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
         const icon = themeToggleButton.querySelector('i');
+
         if (isDarkMode) {
             body.classList.add('dark')
             icon.classList.remove('ph-sun');
@@ -132,18 +132,42 @@
         }
         
         if (themeToggleButton) {
+
             themeToggleButton.addEventListener('click', () => {
                 if (body.classList.contains('dark')) {
                     body.classList.remove('dark');
                     themeToggleButton.querySelector('i').classList.remove('ph-moon');
                     themeToggleButton.querySelector('i').classList.add('ph-sun');
+                    localStorage.setItem('theme', 'light');
+                    highlightActiveNavLink(false);
                 } else {
                     body.classList.add('dark');
                     themeToggleButton.querySelector('i').classList.remove('ph-sun');
                     themeToggleButton.querySelector('i').classList.add('ph-moon');
+                    localStorage.setItem('theme', 'dark');
+                    highlightActiveNavLink(true);
                 }
             });
         }
     }
+
+    const highlightActiveNavLink = (isDarkMode) => {
+
+        const currentUrl = window.location.pathname;
+
+        document.querySelectorAll('nav a').forEach((link) => {
+            const href = link.getAttribute('href');            
+            if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
+                if (isDarkMode) {
+                    link.classList.remove('dark:text-nav-text-light-dark');
+                    link.classList.add('text-white');
+                } else {
+                    link.classList.remove('text-nav-text-light');
+                    link.classList.add('text-black');
+                }
+            }
+        });
+    }
+
 
 </script>
