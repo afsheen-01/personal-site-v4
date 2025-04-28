@@ -90,7 +90,13 @@
             }
         });
 
-        // Mobile menu toggle
+        menuToggle();
+        themeToggle();
+        
+    });
+
+    const menuToggle = () => {
+
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
         const closeButton = document.getElementById('close-mobile-nav');
@@ -106,6 +112,23 @@
                 document.body.style.overflow = ''; // Restore scrolling
             });
         }
-    });
+    }
+
+    const themeToggle = () => {
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+        
+        console.log(body.classList)
+
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                body.classList.toggle('dark');
+                themeToggleButton.querySelector('i').classList.toggle('ph-moon');
+                themeToggleButton.querySelector('i').classList.toggle('ph-sun');
+
+                console.log('Theme toggled', body.classList);
+            });
+        }
+    }
 
 </script>
