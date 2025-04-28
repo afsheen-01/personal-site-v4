@@ -1,12 +1,12 @@
-<aside class="md:w-[210px] md:border-r border-bd-light md:h-screen sticky top-0 flex flex-col justify-between bg-white">
+<aside class="md:w-[210px] md:border-r border-bd-light md:h-screen sticky top-0 flex flex-col justify-between bg-white dark:bg-black">
     
     <div class="flex items-end justify-between px-6 py-4 border-b border-bd-light">
         <div class="w-full flex items-end md:justify-between gap-2">
             <h1 class="text-3xl font-serif">
                 <a href="/" class="cursor-pointer">Afsheen</a>
             </h1>
-            <button class="cursor-not-allowed" id="theme-toggle">
-                <i class="ph-sun text-xl md:text-2xl text-gray-300"></i>
+            <button class="cursor-pointer" id="theme-toggle">
+                <i class="ph-sun text-xl md:text-2xl text-nav-text"></i>
             </button> 
         </div>
         
@@ -118,15 +118,30 @@
         const themeToggleButton = document.getElementById('theme-toggle');
         const body = document.body;
         
-        console.log(body.classList)
-
+        // Set initial icon based on system preference
+        const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const icon = themeToggleButton.querySelector('i');
+        if (isDarkMode) {
+            body.classList.add('dark')
+            icon.classList.remove('ph-sun');
+            icon.classList.add('ph-moon');
+        } else {
+            body.classList.remove('dark');
+            icon.classList.remove('ph-moon');
+            icon.classList.add('ph-sun');
+        }
+        
         if (themeToggleButton) {
             themeToggleButton.addEventListener('click', () => {
-                body.classList.toggle('dark');
-                themeToggleButton.querySelector('i').classList.toggle('ph-moon');
-                themeToggleButton.querySelector('i').classList.toggle('ph-sun');
-
-                console.log('Theme toggled', body.classList);
+                if (body.classList.contains('dark')) {
+                    body.classList.remove('dark');
+                    themeToggleButton.querySelector('i').classList.remove('ph-moon');
+                    themeToggleButton.querySelector('i').classList.add('ph-sun');
+                } else {
+                    body.classList.add('dark');
+                    themeToggleButton.querySelector('i').classList.remove('ph-sun');
+                    themeToggleButton.querySelector('i').classList.add('ph-moon');
+                }
             });
         }
     }

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Buenard:wght@400..700&display=swap");
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Import Be Vietnam font from local assets */
 @font-face {
@@ -76,5 +77,6 @@
   /* Dark theme styles */
   body.dark {
     background-color: #1a1a1a;
+    color: white;
   }
 }
