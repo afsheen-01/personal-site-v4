@@ -1,6 +1,6 @@
 import markdownIt from "markdown-it";
 
-export default async (eleventyConfig) => {
+export default (eleventyConfig) => {
 
   let options = {
     html: true,
@@ -8,6 +8,9 @@ export default async (eleventyConfig) => {
     linkify: true,
   };
   eleventyConfig.setLibrary("md", markdownIt(options));
+  eleventyConfig.addCollection("blogs", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("./blogs/*.md");
+  });
 
   eleventyConfig.addPassthroughCopy('assets');
   

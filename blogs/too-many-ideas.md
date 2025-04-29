@@ -1,6 +1,8 @@
 ---
 layout: blog/baseLayout.liquid
 title: Too many ideas!
+subtitle: coping with "oohhh, shiney!"
+tags: ['blogs']
 ---
 
 Too many ideas!
