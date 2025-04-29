@@ -15,3 +15,91 @@
         <i class="ph-instagram-logo text-2xl md:text-xl"></i>
     </a>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        let isDarkMode;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            isDarkMode = true;
+        } else if (savedTheme === 'light') {
+            isDarkMode = false;
+        } else {
+            isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        }
+
+        menuToggle();
+        highlightActiveNavLink(isDarkMode);
+        themeToggle(isDarkMode);
+    });
+
+    const menuToggle = () => {
+        const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+        const closeButton = document.getElementById('close-mobile-nav');
+        
+        if (mobileMenuToggle && mobileNavOverlay && closeButton) {
+            mobileMenuToggle.addEventListener('click', () => {
+                mobileNavOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when overlay is open
+            });
+            
+            closeButton.addEventListener('click', () => {
+                mobileNavOverlay.classList.add('hidden');
+                document.body.style.overflow = ''; // Restore scrolling
+            });
+        }
+    }
+
+    const themeToggle = (isDarkMode) => {
+        const themeToggleButton = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggleButton.querySelector('i');
+
+        if (isDarkMode) {
+            body.classList.add('dark')
+            icon.classList.remove('ph-sun');
+            icon.classList.add('ph-moon');
+        } else {
+            body.classList.remove('dark');
+            icon.classList.remove('ph-moon');
+            icon.classList.add('ph-sun');
+        }
+        
+        if (themeToggleButton) {
+
+            themeToggleButton.addEventListener('click', () => {
+                if (body.classList.contains('dark')) {
+                    body.classList.remove('dark');
+                    themeToggleButton.querySelector('i').classList.remove('ph-moon');
+                    themeToggleButton.querySelector('i').classList.add('ph-sun');
+                    localStorage.setItem('theme', 'light');
+                    highlightActiveNavLink(false);
+                } else {
+                    body.classList.add('dark');
+                    themeToggleButton.querySelector('i').classList.remove('ph-sun');
+                    themeToggleButton.querySelector('i').classList.add('ph-moon');
+                    localStorage.setItem('theme', 'dark');
+                    highlightActiveNavLink(true);
+                }
+            });
+        }
+    }
+
+    const highlightActiveNavLink = (isDarkMode) => {
+        const currentUrl = window.location.pathname;
+
+        document.querySelectorAll('nav a').forEach((link) => {
+            const href = link.getAttribute('href');            
+            if (href === currentUrl || (href !== '/' && href !== '#' && currentUrl.includes(href))) {
+                if (isDarkMode) {
+                    link.classList.remove('text-nav-text-light', 'text-black', 'dark:text-nav-text-light-dark');
+                    link.classList.add('text-white');
+                } else {
+                    link.classList.remove('text-nav-text-light', 'text-white', 'dark:text-nav-text-light-dark');
+                    link.classList.add('text-black');
+                }
+            }
+        });
+    }
+</script>
