@@ -435,13 +435,6 @@
       }
     }
   }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
-    }
-  }
   .md\:static {
     @media (width >= 48rem) {
       position: static;
@@ -495,11 +488,6 @@
   .md\:gap-2 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 2);
-    }
-  }
-  .md\:gap-3 {
-    @media (width >= 48rem) {
-      gap: calc(var(--spacing) * 3);
     }
   }
   .md\:gap-4 {
@@ -752,6 +740,17 @@
   body.dark {
     background-color: #1a1a1a;
     color: white;
+  }
+}
+@layer components {
+  .blog-content h1 {
+    font-family: var(--font-serif);
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+    @media (width >= 48rem) {
+      font-size: var(--text-3xl);
+      line-height: var(--tw-leading, var(--text-3xl--line-height));
+    }
   }
 }
 @property --tw-space-y-reverse {

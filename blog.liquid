@@ -17,22 +17,23 @@
                 <p class="md:text-md text-base">
                     Here's where I talk about the problems I've solved as an engineer, new things I'm learning, and anything else that happens to catch my interest.
                 </p>
-                
+
                 <div class="md:space-y-11 space-y-6">
                     <h2 class="md:text-3xl text-xl font-serif">Blogs</h2>
-                    
                     <div class="md:space-y-8 space-y-6">
-                        
-                        <div class="space-y-1">
-                            <h3 class="md:text-xl text-base text-primary-text-light dark:text-primary-text-dark md:font-normal">
-                                <a href="/blog/too-many-ideas" class="hover:underline">Too many ideas!</a>
-                            </h3>
-                            <p class="text-primary-text-light dark:text-primary-text-dark md:text-base text-sm">
-                                coping with "oohhh, shiney!"
-                            </p>
-                        </div>
+                        {% for blog in collections.blogs %}
+                            <div class="space-y-1">
+                                <h3 class="md:text-xl text-base text-primary-text-light dark:text-primary-text-dark md:font-normal">
+                                    <a href="{{ blog.url | url }}">{{ blog.data.title }}</a>
+                                </h3>
+                                <p class="text-primary-text-light dark:text-primary-text-dark md:text-base text-sm">
+                                    {{ blog.data.subtitle }}
+                                </p>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
+                    
             </main>
             
             <div class="block md:hidden">{% include 'footer' %}</div>

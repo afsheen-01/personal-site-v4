@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Afsheen | Personal Site</title>
+        <title>Afsheen | Blog</title>
         <script src="https://unpkg.com/phosphor-icons"></script>
         <link rel="stylesheet" href="/assets/css/main.out.css">
     </head>
 
-    <body class="font-sans bg-white dark:bg-black">
+    <body class="font-sans text-gray-800 bg-white dark:bg-black dark:text-primary-text-dark">
         <div class="md:flex min-h-screen">
             {% include 'sidebar' %}
-            {% include 'experienceContent' %}
+            
+            <main class="flex-1 md:p-8 p-5 md:pt-22 pt-10 md:space-y-9 space-y-4 max-w-3xl pb-20 md:pb-8 blog-content md:text-base text-sm text-primary-text-light dark:text-primary-text-dark leading-relaxed ">
+                {{ content }}
+            </main>
+            
             <div class="block md:hidden">{% include 'footer' %}</div>
         </div>
     </body>

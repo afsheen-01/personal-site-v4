@@ -78,8 +78,6 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-
-        
         let isDarkMode;
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'dark') {
@@ -90,15 +88,12 @@
             isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
         }
 
-    
         menuToggle();
         highlightActiveNavLink(isDarkMode);
         themeToggle(isDarkMode);
-        
     });
 
     const menuToggle = () => {
-
         const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
         const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
         const closeButton = document.getElementById('close-mobile-nav');
@@ -152,7 +147,6 @@
     }
 
     const highlightActiveNavLink = (isDarkMode) => {
-
         const currentUrl = window.location.pathname;
 
         document.querySelectorAll('nav a').forEach((link) => {
