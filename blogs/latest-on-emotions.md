@@ -7,7 +7,7 @@ tags: ["blogs"]
 
 # Latest on emotions
 
-The personal life side of the whirlwind referred to in [navigating latest storm](../navigating-latest-storm/).
+The personal life side of the whirlwind referred to in [the latest pickle](../on-the-latest-pickle/).
 
 - Feeling guilty for mishandling a romantic situation while trying to do be right. To have been optimistic about what something could be despite the challenges I was aware of:
 
