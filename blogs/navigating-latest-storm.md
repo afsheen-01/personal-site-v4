@@ -5,7 +5,7 @@ subtitle: Navigating tricky situations
 tags: ["blogs"]
 ---
 
-# On the latest Storm
+# On the latest Pickle
 
 It’s been quite a whirlwind lately. The more I scrape through my old journal, the more I cringe. Yet all of that was extremely valid for the time. I am through 2021 and half of 2022 which is neither enough nor have I been able to group them well. So, I’ll resort to latest first and maybe work my way down. Here are my notes to self in last 2 months:
 
