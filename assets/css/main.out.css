@@ -46,7 +46,7 @@
     --color-primary-text-dark: #bbbbbb;
     --color-timeline-dark: #686868;
     --color-hamburger-dark: #7d7d7d;
-    --color-bold-dark: #C0C0C0;
+    --color-bold-dark: #c0c0c0;
   }
 }
 @layer base {
@@ -751,6 +751,25 @@
       font-size: var(--text-3xl);
       line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
+  }
+  .blog-content a {
+    text-decoration-line: underline;
+  }
+  .blog-content ul {
+    list-style-type: disc;
+    padding-left: calc(var(--spacing) * 4);
+  }
+  .blog-content ul li {
+    padding-bottom: calc(var(--spacing) * 4);
+    padding-left: calc(var(--spacing) * 2);
+  }
+  .blog-content ul li ul {
+    list-style-type: circle;
+    padding-left: calc(var(--spacing) * 8);
+  }
+  .blog-content ul li ul li {
+    padding-bottom: calc(var(--spacing) * 1);
+    padding-left: calc(var(--spacing) * 1);
   }
 }
 @property --tw-space-y-reverse {

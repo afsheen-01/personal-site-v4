@@ -67,7 +67,7 @@
   --color-primary-text-dark: #bbbbbb;
   --color-timeline-dark: #686868;
   --color-hamburger-dark: #7d7d7d;
-  --color-bold-dark: #C0C0C0; 
+  --color-bold-dark: #c0c0c0;
 }
 
 @layer base {
@@ -91,5 +91,20 @@
 @layer components {
   .blog-content h1 {
     @apply md:text-3xl text-xl font-serif;
+  }
+  .blog-content a {
+    @apply underline;
+  }
+  .blog-content ul {
+    @apply list-disc pl-4;
+  }
+  .blog-content ul li {
+    @apply pl-2 pb-4;
+  }
+  .blog-content ul li ul {
+    @apply list-[circle] pl-8;
+  }
+  .blog-content ul li ul li {
+    @apply pl-1 pb-1;
   }
 }
