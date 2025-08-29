@@ -9,7 +9,7 @@ tags: ["blogs"]
 
 The personal life side of the whirlwind referred to in [the latest pickle](../on-the-latest-pickle/).
 
-- Feeling guilty for mishandling a romantic situation while trying to do be right. To have been optimistic about what something could be despite the challenges I was aware of:
+- Feeling guilty for mishandling a romantic situation while trying to be right. To have been optimistic about what something could be despite the challenges I was aware of:
 
   - Lack of efforts to make something out of it
   - Knowing that I am not the only one
