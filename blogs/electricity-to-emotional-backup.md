@@ -13,7 +13,7 @@ So, we called. No response.
 
 _“Let’s drop a message on whatsapp and see if it goes through.”_
 
-English is not our first language but due to difference in regional languages we use it by default. Cognisant that it they may not understand it on the other end, we simplified it as much as we could. “Apologise” became “sorry” and “inconvenience” became “trouble”. We sent it with an attached screenshot of the transaction.
+English is not our first language but due to difference in regional languages we use it by default. Cognisant that they may not understand it on the other end, we simplified it as much as we could. “Apologise” became “sorry” and “inconvenience” became “trouble”. We sent it with an attached screenshot of the transaction.
 
 We finally got a response, _”Hi”_.
 
