@@ -9,7 +9,7 @@ tags: ["blogs"]
 
 Thanks to the theme of blaugust, I went through all my journals both phyiscal and digital. I cried, cringed and laughed. I smiled for how inconsequential the situations were which made me feel so much and so deep. Here's a compilation of all the thoughts that I've repeated to myself over the years. These are mostly intrusive thoughts I keep giving into, again and again due to setbacks.
 
-- Accountability for new ventures is very important to ensure progress no matter.
+- Accountability for new ventures is very important to ensure progress.
 - If current tools at your disposal don’t work and slow you down , restart. No matter how much time you’ve spent on them.
 - Things could still go faster. _Occurrence in journal 3_.
 - Get back on the track one step at a time.
@@ -26,7 +26,7 @@ Thanks to the theme of blaugust, I went through all my journals both phyiscal an
 - Expectation management. _Occurrence in journal 3_.
 - Don’t downplay and negate yourself. _Occurrence in journal 2_.
 - Over-organising, over-planning and overthinking is a bane to problem solving. Gives false sense of progress with over-complication. _Occurrence in journal 7_.
-- Chasing speed and perfection at the same time on day 0 is not the best way to operate. It’s ideal in your head, sure but all good things take time.
+- Chasing speed and perfection at the same time on day 0 is not the best way to operate. Sure, it's ideal in your head, but all good things take time.
 - When you’re tired, take a break.
 - Calm down. _Occurrence in journal 7_.
 - Ease in, be okay with failure. Recoup energy and start again. _Occurrence in journal 2_.
