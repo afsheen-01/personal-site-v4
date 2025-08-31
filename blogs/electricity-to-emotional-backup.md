@@ -19,13 +19,13 @@ We finally got a response, _”Hi”_.
 
 Our response? _“Let’s call now to try and explain the situation without having things lost in communication”_.
 
-She called. A guy picked up and spoke in kannada - the vernacular of the region we’re living in. Now, we've been here since a while but because it's a cosmopolitan area, we never felt the need to learn it. All I know in kannada is: _“don’t know kannada”, “give”, “take”, “do”_. So, in a rare event of me needing it at all, I get by with broken hindi, some english and these verbs and phrases.
+She called. A guy picked up and spoke in kannada - the vernacular of the region we’re living in. Now, we've been here for a while but because it's a cosmopolitan area, we never felt the need to learn it. All I know in kannada is: _“don’t know kannada”, “give”, “take”, “do”_. So, in a rare event of me needing it at all, I get by with broken hindi, some english and these verbs and phrases.
 
-Anyways, after 1st unsuccessful attempt, she gave us an update. This time, I called and said _“don’t know kannada”, “do text”_ in the vernacular. The guy laughed and said some sentences we did not understand. We had to cut the call to come to a resolution instead of entertaining this more. We also got 2 whatsapp messages in vernacular that we went on to translate using chatGPT.
+Anyways, after 1st unsuccessful attempt, she gave us an update. This time, I called and said _“don’t know kannada”, “do text”_ in the vernacular. The guy laughed and said some sentences we did not understand. We had to cut the call to come to a resolution instead of entertaining this more. We also got 2 whatsapp messages in vernacular which we went on to translate using chatGPT.
 
 We got a video call from the guy, we cut. We got incessant calls that we kept cutting and a message again. We responded with _“don’t know kannada, using a translator, please text”_. We get a voice note and more calls, we cut. We drop the same message again. We finally got a message in english, _“sex video hd 🖕”_. Enraged me wanted to pick up a call to abuse and yell but we chose to not entertain and blocked the number.
 
-We start getting normal calls from an unknown number. Although we knew it could be the creepy guy, we chose to give it a fraction of benefit of doubt and I picked up. The guy repeated the message sent I lost it.
+We start getting normal calls from an unknown number. Although we knew it could be the creepy guy, we chose to give it a fraction of benefit of doubt and I picked up. The guy repeated the message sent and I lost it.
 I said, _“bhak, madarchod”_, cut the call and blocked the number.
 
 We got one call from the old number again, we cut and blocked that from system as well. Concluded the matter with money lost for the 20 minutes we spent.
