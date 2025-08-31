@@ -7,7 +7,7 @@ tags: ["blogs"]
 
 # Summarising the lookback
 
-Thanks to the theme of blaugust, I went through all my journals both phyiscal and digital. I cried, cringed and laughed. I smiled for how inconsequential the situations were which made me feel so much and so deep. Here's a compilation of all the thoughts that I've repeated to myself in ascending order. These are mostly intrusive thoughts I keep giving into, again and again due to setbacks.
+Thanks to the theme of blaugust, I went through all my journals both phyiscal and digital. I cried, cringed and laughed. I smiled for how inconsequential the situations were which made me feel so much and so deep. Here's a compilation of all the thoughts that I've repeated to myself over the years, from the earliest to the latest. These are mostly intrusive thoughts I keep giving into, again and again due to setbacks.
 
 - Accountability for new ventures is very important to ensure progress no matter.
 - If current tools at your disposal don’t work and slow you down , restart. No matter how much time you’ve spent on them.
