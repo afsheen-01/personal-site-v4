@@ -2,10 +2,13 @@
 layout: blog/baseLayout.liquid
 title: Latest on emotions
 subtitle: That's gotta sting, eh?
+date: 2025-08-29
 tags: ["blogs"]
 ---
 
 # Latest on emotions
+
+_{{ date | date: "%b %d, %Y" }}_
 
 The personal life side of the whirlwind referred to in [the latest pickle](../on-the-latest-pickle/).
 

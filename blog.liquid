@@ -23,9 +23,16 @@
                     <div class="md:space-y-8 space-y-6">
                         {% for blog in collections.blogs %}
                             <div class="space-y-1">
-                                <h3 class="md:text-xl text-base text-primary-text-light dark:text-primary-text-dark md:font-normal">
-                                    <a href="{{ blog.url | url }}">{{ blog.data.title }}</a>
-                                </h3>
+
+                                <div class="flex items-center gap-2">
+
+                                    <h3 class="md:text-xl text-base text-primary-text-light dark:text-primary-text-dark md:font-normal">
+                                        <a href="{{ blog.url | url }}">{{ blog.data.title }}</a>
+                                    </h3>
+
+                                    <span class="text-timeline-light dark:text-timeline-dark md:inline hidden"> • {{ blog.data.date | date: "%b %d, %Y" }}</span>
+                                </div>
+                                
                                 <p class="text-primary-text-light dark:text-primary-text-dark md:text-base text-sm">
                                     {{ blog.data.subtitle }}
                                 </p>

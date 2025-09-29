@@ -2,10 +2,13 @@
 layout: blog/baseLayout.liquid
 title: Summarising the lookback
 subtitle: Mirror mirror on the wall…
+date: 2025-08-31
 tags: ["blogs"]
 ---
 
 # Summarising the lookback
+
+_{{ date | date: "%b %d, %Y" }}_
 
 Thanks to the theme of blaugust, I went through all my journals both phyiscal and digital. I cried, cringed and laughed. I smiled for how inconsequential the situations were which made me feel so much and so deep. Here's a compilation of all the thoughts that I've repeated to myself over the years. These are mostly intrusive thoughts I keep giving into, again and again due to setbacks.
 

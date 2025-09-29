@@ -2,10 +2,13 @@
 layout: blog/baseLayout.liquid
 title: How to be a human
 subtitle: A novice's edition
+date: 2025-08-04
 tags: ["blogs"]
 ---
 
 # How to be a human - a novice's edition
+
+_{{ date | date: "%b %d, %Y" }}_
 
 Hello world, I am Afsheen - a woman in her mid-twenties. I like to ask a plethora of questions to understand my experiences and the world around me. The range of experiences are much like the ever-expanding space, where change is the only constant.
 

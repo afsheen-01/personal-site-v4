@@ -2,10 +2,13 @@
 layout: blog/baseLayout.liquid
 title: On the latest Pickle
 subtitle: Navigating tricky situations
+date: 2025-08-29
 tags: ["blogs"]
 ---
 
 # On the latest Pickle
+
+_{{ date | date: "%b %d, %Y" }}_
 
 It’s been quite a whirlwind lately. The more I scrape through my old journal, the more I cringe. Yet all of that was extremely valid for the time. I am through 2021 and half of 2022 which is neither enough nor have I been able to group them well. So, I’ll resort to latest first and maybe work my way down. Here are my notes to self in last 2 months:
 

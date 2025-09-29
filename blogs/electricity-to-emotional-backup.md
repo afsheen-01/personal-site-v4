@@ -2,10 +2,13 @@
 layout: blog/baseLayout.liquid
 title: Electricity to emotional backup
 subtitle: A creepy affair
+date: 2025-08-31
 tags: ["blogs"]
 ---
 
 # Electricity to emotional backup
+
+_{{ date | date: "%b %d, %Y" }}_
 
 An average Saturday in our house of 3 working women living together is catching up on chores. A couple of hours in errand morph into half the day spent in seconds. One such chore that we’ve had pending was calling our newly appointed UPS provider. The problem? to check why our power backup exhausts in 20 minutes which is a fourth of the time promised to us. They’d been bailing on us for over 2 weeks, so we chose to freeze their payment until the issue got resolved. Finally, after a 10:30AM commitment, the guys showed at 2:30PM IST and we got it done in a huff. Post that, the flatmate handling UPS transactions set off to make the payment. An error in copy pasting the number resulted in money sent to the wrong account. She let us know and we embarked on another problem to solve. She’d already raised a complaint with the bank to stop the transaction, when I suggested to call the number as well, _“Bank will take time to resolve. But if the person on the other side is able understand and revert, we won’t have to go through the trouble_”.
 
