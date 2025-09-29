@@ -252,6 +252,12 @@
   .flex-1 {
     flex: 1;
   }
+  .shrink {
+    flex-shrink: 1;
+  }
+  .grow {
+    flex-grow: 1;
+  }
   .cursor-not-allowed {
     cursor: not-allowed;
   }
