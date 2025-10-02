@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Afsheen | Blog</title>
+        <script src="https://unpkg.com/phosphor-icons"></script>
+        <link rel="stylesheet" href="/assets/css/main.out.css">
+    </head>
+
+    <body class="font-sans text-gray-800 bg-white dark:bg-black dark:text-primary-text-dark">
+        <div class="md:flex min-h-screen">
+            {% include 'sidebar' %}
+            
+            <main class="flex-1 md:p-8 p-5 md:pt-22 pt-10 md:space-y-9 space-y-6 max-w-6xl pb-20 md:pb-8">
+                <p class="md:text-md text-base">
+                    Documenting images here because want to get off instagram but keep the images around.
+                </p>
+
+                <div class="md:space-y-11 space-y-6">
+                    <h2 class="md:text-3xl text-xl font-serif">Gallery</h2>
+                    <div class="md:space-y-8 space-y-6">
+                        {% for imageCollection in collections.gallery %}
+                            <div class="space-y-1">
+
+                                <div class="flex items-center gap-2">
+
+                                    <h3 class="md:text-xl text-base text-primary-text-light dark:text-primary-text-dark md:font-normal">
+                                        <a href="{{ imageCollection.url | url }}">{{ imageCollection.data.title }}</a>
+                                    </h3>
+
+                                    <span class="text-timeline-light dark:text-timeline-dark md:inline hidden"> • {{ imageCollection.data.date | date: "%b %d, %Y" }}</span>
+                                </div>
+                                
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+                    
+            </main>
+            
+            <div class="block md:hidden">{% include 'footer' %}</div>
+        </div>
+    </body>
+</html>
+
+<script>
+
+</script>

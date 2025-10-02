@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Afsheen | Blog</title>
+        <script src="https://unpkg.com/phosphor-icons"></script>
+        <link rel="stylesheet" href="/assets/css/main.out.css">
+    </head>
+
+    <body class="font-sans text-gray-800 bg-white dark:bg-black dark:text-primary-text-dark">
+        <div class="md:flex min-h-screen">
+            {% include 'sidebar' %}
+
+            <main class="flex-1 md:p-8 p-5 md:pt-22 pt-10 md:space-y-9 space-y-4 pb-20 md:pb-8 gallery-content md:text-base text-sm text-primary-text-light dark:text-primary-text-dark leading-relaxed ">
+                <button class="absolute top-1/2 -translate-y-1/2 text-black hover:bg-opacity-70 transition-all duration-200 cursor-pointer z-10 carousel-prev">
+                    <i class="ph ph-caret-left text-xl"></i>
+                </button>
+                <div class="image-counter text-center absolute bottom-4 left-[55%] -translate-x-1/2 text-sm text-gray-600 dark:text-gray-400">
+                    <span id="currentImage">1</span>/<span id="totalImages">1</span>
+                </div>
+                {{ content }}
+                <button class="absolute right-4 top-1/2 translate-y-1/2 text-black p-2 hover:bg-opacity-70 transition-all duration-200 cursor-pointer z-10 carousel-next">
+                    <i class="ph ph-caret-right text-xl"></i>
+                </button>
+                
+                
+                
+            </main>
+            
+            <div class="block md:hidden">{% include 'footer' %}</div>
+        </div>
+    </body>
+</html>
+
+<script>
+    const images = document.querySelectorAll('img');
+    let currentIndex = 0;
+
+    function updateCounter() {
+        document.getElementById('currentImage').textContent = currentIndex + 1;
+        document.getElementById('totalImages').textContent = images.length;
+    }
+
+    function showImage(index) {
+        images.forEach(image => image.style.display = 'none');
+        images[index].style.display = 'block';
+        updateCounter();
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(currentIndex);
+    }
+
+    document.querySelector('.carousel-prev').addEventListener('click', prevImage);
+    document.querySelector('.carousel-next').addEventListener('click', nextImage);
+
+    // Initialize
+    showImage(currentIndex);
+</script>

@@ -110,4 +110,10 @@
   .blog-content h1 + p {
     @apply text-timeline-light dark:text-timeline-dark;
   }
+  .gallery-content img {
+    @apply w-1/2 h-1/2;
+  }
+  .gallery-content p:has(img) {
+    @apply flex justify-center items-center;
+  }
 }
