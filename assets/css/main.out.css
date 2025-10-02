@@ -771,6 +771,12 @@
     padding-bottom: calc(var(--spacing) * 1);
     padding-left: calc(var(--spacing) * 1);
   }
+  .blog-content h1 + p {
+    color: var(--color-timeline-light);
+    &:where(.dark, .dark *) {
+      color: var(--color-timeline-dark);
+    }
+  }
 }
 @property --tw-space-y-reverse {
   syntax: "*";

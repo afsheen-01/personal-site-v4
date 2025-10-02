@@ -107,4 +107,7 @@
   .blog-content ul li ul li {
     @apply pl-1 pb-1;
   }
+  .blog-content h1 + p {
+    @apply text-timeline-light dark:text-timeline-dark;
+  }
 }
